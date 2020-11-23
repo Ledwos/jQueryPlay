@@ -1,0 +1,26 @@
+{
+  "name": "jQueryPlay",
+  "version": "1.0.0",
+  "description": "- It's been a year since I touched jQuery, this will be my practice area to get comfortable with it.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ledwos/jQueryPlay.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ledwos/jQueryPlay/issues"
+  },
+  "homepage": "https://github.com/Ledwos/jQueryPlay#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}

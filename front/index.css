@@ -1,0 +1,6 @@
+#hoverP {
+    border: 2px solid rgb(43, 43, 187);
+    border-radius: 8px;
+    display: inline;
+    padding: 5px;
+}
