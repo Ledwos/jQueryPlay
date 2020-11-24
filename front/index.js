@@ -3,7 +3,7 @@ $(document).ready(function() {
     //   document is finished loading
 
     // hide p tag
-    $('button').click(() => {
+    $('#hideBtn').click(() => {
         $('#hiddenP').hide('slow', function() {
             alert("This occured after I was hidden, an example of using a callback");
         });
