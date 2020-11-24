@@ -2,10 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- ensures proper rendering and touch zooming -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jQueryPlay</title>
+    <!-- BOOTSTRAP -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- LOCAL FILES -->
     <!-- import JS file -->
     <script src='./index.js'></script>
     <!-- CSS -->
@@ -26,5 +35,39 @@
     <p id='textToCopy'> I'd like 3.141592654 slices of pi</p>
     <p>The element below likes to copy onClick</p>
     <p id='textCopier'>No I don't!!</p>
+    <br/>
+    <br/>
+    <h2>Strap yer Boots, It's time for Bootstrap styling</h2>
+    <small>(Yes this is the part where we play with bootstrap)</small>
+    <div class='container p-3 border bg-dark text-white'>
+        <h3>I'm a container class</h3>
+        <ul>
+            <li>15px padding left / right by default</li>
+            <li>Use 'spacing utlities to add margin / padding</li>
+            <li class='pt-3'>I have a padding top of 16px (<code>class='.pt-3'</code>) <-- code element (pretty cool)</li>
+            <li>Default font-size is 16px, with a line-height of 1.5</li>
+            <p>p elements have margin-top: 0 and margin-bottom: 1rem</p>
+        </ul>
+    </div>
+    <div class='container-fluid border'>
+        <h3>And I'm a container-fluid class</h3>
+        <ul>
+            <li>I take up 100% viewport width</li>
+        </ul>
+    </div>
+    <div class='container-md border'>
+        <h3>Container-md</h3>
+        <ul>
+            <li>Responsive container classes are -sm | -md | -lg | -xl</li>
+            <li class='text-uppercase'> look at this cool <kbd>kbd</kbd> element</li>
+            <p>^ also <code>text-uppercase</code> class</p>
+        </ul>
+    </div>
+    <h2 class='mt-3'>Bootstrap Grid System</h2>
+    <div class='row container-fluid border border-primary'>
+        <div class='col-sm-6 border border-secondary text-monospace'>col-3</div>
+        <div class='col-sm-3 border border-secondary font-weight-bold'>col-3</div>
+        <div class='col-sm-3 border border-secondary text-right'>col-3</div>
+    </div>
 </body>
 </html>
