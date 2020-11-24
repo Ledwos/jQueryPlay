@@ -90,5 +90,32 @@
         <button type='button' class='btn btn-secondary'>two</button>
         <button type='button' class='btn btn-light btn-outline-secondary'>three</button>
     </div>
+    <h2 class='mt-4'>Form</h2>
+    <br/>
+    <form class='border border-secondary container container-fluid p-2 was-validated'>
+        <div class='form-row'>
+            <div class='col'>
+                <input 
+                    type='text' 
+                    class='form-control' 
+                    id='email' 
+                    placeholder='Email' 
+                    pattern="[a-zA-Z0-9!#$%&amp;'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)+"
+                    required>
+                <div class='invalid-feedback'>Please enter your email</div>
+                <div class='valid-feedback'>Thank you :)</div>
+            </div>
+            <div class='col'>
+                <input type='password' class='form-control' id='email' placeholder='Password' required>
+                <div class='invalid-feedback'>Please enter your password</div>
+                <div class='valid-feedback'>Thank you :)</div>
+            </div>
+        </div>
+        <div class='form-row'>
+            <div class='col'>
+                <button type='button' class='btn btn-dark'>Submit</button>
+            </div>
+        </div>
+    </form>
 </body>
 </html>
