@@ -14,6 +14,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- CLAY CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@clayui/css/lib/css/atlas.css" />
     <!-- LOCAL FILES -->
     <!-- import JS file -->
     <script src='./index.js'></script>
@@ -21,6 +23,90 @@
     <link rel="stylesheet" href='./index.css'>
 </head>
 <body>
+    <nav 
+        class='navbar navbar-collapse-absolute  navbar-expand-lg navbar-underline navigation-bar navigation-bar-light'
+    >
+        <div class='container-fluid container-fluid-max-x1'>
+            <a
+                aria-controls='navigationBarCollapse00'
+                aria-expanded='false'
+                aria-label="Toggle Navigation"
+                class='collapsed navbar-toggler navbar-toggler-link'
+                href='#navigationBarCollapse00'
+                role='button'
+            >
+                <span class='navbar-text-truncate'>App Section</span>
+                <svg
+                    class='lexicon-icon lexicon-icon-caret-bottom'
+                    focusable='false'
+                    role='presentation'
+                >
+                    <use xlink:href='./assets/icons.svg#caret-bottom'/>
+                </svg>
+            </a>
+        </div>
+        <div
+            class='collapse navbar-collapse'
+            id='navigationBarCollapse00'
+            style='z-index: 505;'
+        >
+            <div class='container-fluid container-fluid-max-x1'>
+                <ul class='navbar-nav'>
+                    <li class='nav-item'>
+                        <a class='nav-link active' href='/'>
+                            <span class='navbar-text-truncate'>jQuery</span>
+                        </a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='/bs4'>
+                            <span class='navbar-text-truncate'>Bootstrap 4</span>
+                        </a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='/clay'>
+                            <span class='navbar-text-truncate'>Clay UI</span>
+                        </a>
+                    </li>
+                    <li class='dropdown nav-item show-dropdown-on-collapse'>
+                        <a 
+                            aria-expanded="false"
+                            aria-haspopup="true"
+                            class='nav-link'
+                            data-toggle='dropdown'
+                            href='#1'
+                            role='button'
+                        >
+                            <span class='navbar-text-truncate'>More</span>
+                            <svg
+                                class='lexicon-icon lexicon-icon-caret-bottom'
+                                focusable='false'
+                                role='presentation'
+                            >
+                                <use xlink:href='./assets/icons.svg#caret-bottom'/>
+                            </svg>
+                        </a>
+                        <ul aria-labelledby="" class='dropdown-menu'>
+                            <li>
+                                <a class='dropdown-item' href='/'
+                                > jQuery
+                                </a>
+                            </li>
+                            <li>
+                                <a class='dropdown-item' href='/bs4'
+                                > Bootstrap 4
+                                </a>
+                            </li>
+                            <li>
+                                <a class='dropdown-item' href='/clay'
+                                > Clay UI
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <p>Practice jQuery here :D</p>
     <p>Syntax:</p>
     <p>$(selector).action()</p>
@@ -35,93 +121,5 @@
     <p id='textToCopy'> I'd like 3.141592654 slices of pi</p>
     <p>The element below likes to copy onClick</p>
     <p id='textCopier'>No I don't!!</p>
-    <br/>
-    <br/>
-    <h2>Strap yer Boots, It's time for Bootstrap styling</h2>
-    <small>(Yes this is the part where we play with bootstrap)</small>
-    <div class='container p-3 border bg-dark text-white'>
-        <h3>I'm a container class</h3>
-        <ul>
-            <li>15px padding left / right by default</li>
-            <li>Use 'spacing utlities to add margin / padding</li>
-            <li class='pt-3'>I have a padding top of 16px (<code>class='.pt-3'</code>) <-- code element (pretty cool)</li>
-            <li>Default font-size is 16px, with a line-height of 1.5</li>
-            <p>p elements have margin-top: 0 and margin-bottom: 1rem</p>
-        </ul>
-    </div>
-    <div class='container-fluid border'>
-        <h3>And I'm a container-fluid class</h3>
-        <ul>
-            <li>I take up 100% viewport width</li>
-        </ul>
-    </div>
-    <div class='container-md border'>
-        <h3>Container-md</h3>
-        <ul>
-            <li>Responsive container classes are -sm | -md | -lg | -xl</li>
-            <li class='text-uppercase'> look at this cool <kbd>kbd</kbd> element</li>
-            <p>^ also <code>text-uppercase</code> class</p>
-        </ul>
-    </div>
-    <h2 class='mt-3'>Bootstrap Grid System</h2>
-    <div class='row container-fluid border border-primary'>
-        <div class='col-sm-6 border border-secondary text-monospace'>col-6</div>
-        <div class='col-sm-3 border border-secondary font-weight-bold'>col-3</div>
-        <div class='col-sm-3 border border-secondary text-right'>col-3</div>
-    </div>
-    <br/>
-    <br/>
-    <h4>Image</h4>
-    <p> with <code>class='img-thumbnail'</code></p>
-    <img class='img-thumbnail mx-auto d-block' src='https://i.redd.it/sk9cerutt7w41.jpg'>
-    <h2> El Jumbotron!</h2>
-    <div class='jumbotron jumbotron-fluid'>
-        <h2>Hola</h2>
-        <p>Me llamo jumbotron</p>
-    </div>
-    <div class='alert alert-success alert-dismissable'>
-        <strong>Congrats!</strong> This is a success alert :D
-        <button type='button' class='close' data-dismiss='alert'>&times</button>
-    </div>
-    <h2>Buttons!</h2>
-    <p>in this case they are <span class='badge badge-info'>Grouped</span></p>
-    <div class='btn-group btn-group-lg'>
-        <button type='button' class='btn btn-dark'>one</button>
-        <button type='button' class='btn btn-secondary'>two</button>
-        <button type='button' class='btn btn-light btn-outline-secondary'>three</button>
-    </div>
-    <h2 class='mt-4'>Form</h2>
-    <br/>
-    <form class='border border-secondary container container-fluid p-2 needs-validation' id='basicForm'>
-        <div class='form-row'>
-            <div class='col'>
-                <input 
-                    type='text' 
-                    class='form-control' 
-                    id='email' 
-                    placeholder='Email' 
-                    pattern="[a-zA-Z0-9!#$%&amp;'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)+"
-                    required>
-                <div class='invalid-feedback'>Please enter your email</div>
-                <div class='valid-feedback'>Thank you :)</div>
-            </div>
-            <div class='col'>
-                <input type='password' class='form-control' id='password' placeholder='Password' required>
-                <div class='invalid-feedback'>Please enter your password</div>
-                <div class='valid-feedback'>Thank you :)</div>
-            </div>
-        </div>
-        <div class='form-group form-check mt-3'>
-            <div class='col'>
-                <input type='checkbox' class='form-check-input' required>
-                <label class='form-check-label'>I agree to disagree</label>
-            </div>
-        </div>
-        <div class='form-row'>
-            <div class='col'>
-                <button type='submit' class='btn btn-dark'>Submit</button>
-            </div>
-        </div>
-    </form>
 </body>
 </html>

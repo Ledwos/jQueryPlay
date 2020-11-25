@@ -13,5 +13,9 @@ app.get('/clay', (req, res) => {
     res.sendFile(path.join(__dirname + '/front/clay.html'))
 });
 
+app.get('/bs4', (req, res) => {
+    res.sendFile(path.join(__dirname + '/front/bs4.html'))
+});
+
 app.listen(port, () => console.log(`live on port ${port}!`));
 

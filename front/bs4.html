@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- ensures proper rendering and touch zooming -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clay Practice</title>
-     <!-- BOOTSTRAP -->
+    <title>jQueryPlay</title>
+    <!-- BOOTSTRAP -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- JQuery -->
@@ -15,6 +16,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- CLAY CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@clayui/css/lib/css/atlas.css" />
+    <!-- LOCAL FILES -->
+    <!-- import JS file -->
+    <script src='./index.js'></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href='./index.css'>
 </head>
 <body>
     <nav 
@@ -52,12 +58,12 @@
                         </a>
                     </li>
                     <li class='nav-item'>
-                        <a class='nav-link' href='/bs4'>
+                        <a class='nav-link active' href='/bs4'>
                             <span class='navbar-text-truncate'>Bootstrap 4</span>
                         </a>
                     </li>
                     <li class='nav-item'>
-                        <a class='nav-link active' href='/clay'>
+                        <a class='nav-link' href='/clay'>
                             <span class='navbar-text-truncate'>Clay UI</span>
                         </a>
                     </li>
@@ -101,50 +107,90 @@
             </div>
         </div>
     </nav>
-    <h2 class='m-3'>This is where clay stuff will be worked on</h2>
-    <div class='container border border-dark'>
-        <div class='alert alert-dismissable alert-success' role='alert'>
-            <span class='alert-indicator'>
-                <svg
-                    class='lexicon-icon lexicon-icon-add-column'
-                    focusable='false'
-                    role='representation'
-                >
-                    <use xlink:href='./assets/icons.svg#check-circle-full'/>
-                </svg>
-            </span>
-            <strong class='lead'>Success:</strong> This is an alert!
-            <button aria-label="Close" class='close' data-dismiss='alert' type='button'>
-                &times
-            </button>
-        </div>
+    <h2>Strap yer Boots, It's time for Bootstrap styling</h2>
+    <small>(Yes this is the part where we play with bootstrap)</small>
+    <div class='container p-3 border bg-dark text-white'>
+        <h3>I'm a container class</h3>
+        <ul>
+            <li>15px padding left / right by default</li>
+            <li>Use 'spacing utlities to add margin / padding</li>
+            <li class='pt-3'>I have a padding top of 16px (<code>class='.pt-3'</code>) <-- code element (pretty cool)</li>
+            <li>Default font-size is 16px, with a line-height of 1.5</li>
+            <p>p elements have margin-top: 0 and margin-bottom: 1rem</p>
+        </ul>
     </div>
-    <h2 class='m-3'>Form Example</h2>
-    <form class='container'>
-        <div class='form-group'>
-            <label for='title'>Title</label>
-            <input 
-                class='form-control'
-                id='title'
-                placeholder="Title"
-                type='text'
-            />
+    <div class='container-fluid border'>
+        <h3>And I'm a container-fluid class</h3>
+        <ul>
+            <li>I take up 100% viewport width</li>
+        </ul>
+    </div>
+    <div class='container-md border'>
+        <h3>Container-md</h3>
+        <ul>
+            <li>Responsive container classes are -sm | -md | -lg | -xl</li>
+            <li class='text-uppercase'> look at this cool <kbd>kbd</kbd> element</li>
+            <p>^ also <code>text-uppercase</code> class</p>
+        </ul>
+    </div>
+    <h2 class='mt-3'>Bootstrap Grid System</h2>
+    <div class='row container-fluid border border-primary'>
+        <div class='col-sm-6 border border-secondary text-monospace'>col-6</div>
+        <div class='col-sm-3 border border-secondary font-weight-bold'>col-3</div>
+        <div class='col-sm-3 border border-secondary text-right'>col-3</div>
+    </div>
+    <br/>
+    <br/>
+    <h4>Image</h4>
+    <p> with <code>class='img-thumbnail'</code></p>
+    <img class='img-thumbnail mx-auto d-block' src='https://i.redd.it/sk9cerutt7w41.jpg'>
+    <h2> El Jumbotron!</h2>
+    <div class='jumbotron jumbotron-fluid'>
+        <h2>Hola</h2>
+        <p>Me llamo jumbotron</p>
+    </div>
+    <div class='alert alert-success alert-dismissable'>
+        <strong>Congrats!</strong> This is a success alert :D
+        <button type='button' class='close' data-dismiss='alert'>&times</button>
+    </div>
+    <h2>Buttons!</h2>
+    <p>in this case they are <span class='badge badge-info'>Grouped</span></p>
+    <div class='btn-group btn-group-lg'>
+        <button type='button' class='btn btn-dark'>one</button>
+        <button type='button' class='btn btn-secondary'>two</button>
+        <button type='button' class='btn btn-light btn-outline-secondary'>three</button>
+    </div>
+    <h2 class='mt-4'>Form</h2>
+    <br/>
+    <form class='border border-secondary container container-fluid p-2 needs-validation' id='basicForm'>
+        <div class='form-row'>
+            <div class='col'>
+                <input 
+                    type='text' 
+                    class='form-control' 
+                    id='email' 
+                    placeholder='Email' 
+                    pattern="[a-zA-Z0-9!#$%&amp;'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)+"
+                    required>
+                <div class='invalid-feedback'>Please enter your email</div>
+                <div class='valid-feedback'>Thank you :)</div>
+            </div>
+            <div class='col'>
+                <input type='password' class='form-control' id='password' placeholder='Password' required>
+                <div class='invalid-feedback'>Please enter your password</div>
+                <div class='valid-feedback'>Thank you :)</div>
+            </div>
         </div>
-        <div class='form-group'>
-            <label for='desc'>Description</label>
-            <textarea
-                class='form-control' 
-                id='desc'
-                placeholder='Description'
-            ></textarea>    
+        <div class='form-group form-check mt-3'>
+            <div class='col'>
+                <input type='checkbox' class='form-check-input' required>
+                <label class='form-check-label'>I agree to disagree</label>
+            </div>
         </div>
-        <div class='form-group'>
-            <button 
-                type='button'
-                class='btn btn-dark'
-            >
-            Submit
-            </button>
+        <div class='form-row'>
+            <div class='col'>
+                <button type='submit' class='btn btn-dark'>Submit</button>
+            </div>
         </div>
     </form>
 </body>
