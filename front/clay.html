@@ -15,6 +15,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- CLAY CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@clayui/css/lib/css/atlas.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href='./index.css'>
 </head>
 <body>
     <nav 
@@ -102,7 +104,6 @@
             </div>
         </div>
     </nav>
-
     <h2 class='m-3'>This is where clay stuff will be worked on</h2>
     <div class='container border border-dark'>
         <div class='alert alert-dismissable alert-success' role='alert'>
@@ -149,5 +150,110 @@
             </button>
         </div>
     </form>
+    <h2 class='m-3'>More Complex Form</h2>
+    <div class='sheet'>
+        <form class='pb-3'>
+            <div class='form-group-autofit'>
+                <div class='form-group-item'>
+                    <label for='title2'>Title</label>
+                    <input
+                        class='form-control'
+                        id='title2'
+                        placeholder="Title"
+                        type='text'
+                    />
+                </div>
+                <div class='form-group-item'>
+                    <label for='select1'>
+                        <span class='text-truncate-inline'>
+                            <span class='text-truncate' title='Select Below'>Select Below</span>
+                        </span>
+                    </label>
+                    <select class='form-control' id='select1'>
+                        <option>One</option>
+                        <option>Two</option>
+                        <option>Three</option>
+                    </select>
+                </div>
+            </div>
+            <div class='form-group-autofit'>
+                <div class='form-group-item'>
+                    <label for='number1'>Number</label>
+                    <div class='input-group'>
+                        <div class='input-group-item input-group-prepend input-group-item-shrink'>
+                            <select class='form-control' id='select2'>
+                                <option>+44</option>
+                                <option>+00</option>
+                            </select>
+                        </div>
+                        <div class='input-group-item input-group-prepend'>
+                            <input
+                                class='form-control'
+                                id='number1'
+                                placeholder="1234567890"
+                                type='number'
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div class='form-group-item'>
+                    <label for='amount1'>Amount</label>
+                    <div class='input-group'>
+                        <div class='input-group-item input-group-item-shrink input-group-prepend'>
+                            <span class='input-group-text'>£</span>
+                        </div>
+                        <div class='input-group-item input-group-prepend'>
+                            <input 
+                                class='form-control'
+                                id='amount1'
+                                placeholder='123'
+                                type='number'
+                            />
+                        </div>
+                        <div class='input-group-item input-group-item-shrink input-group-append'>
+                            <span class='input-group-text'>.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class='form-group-item'>
+                    <label for='radio1'>Would you like to be contacted by phone?</label>
+                    <div class='input-group'>
+                        <div class='input-group-item'>
+                            <input
+                                type='radio'
+                                value='Yes'
+                                id='radio1Y'
+                                name='YN'
+                            >
+                            <label for='radio1Y'>Yes</label>
+                        </div>
+                        <div class='input-group-item'>
+                            <input
+                                type='radio'
+                                value='No'
+                                id='radio1N'
+                                name='YN'
+                            >
+                            <label for='radio1N'>No</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class='form-group-autofit'>
+                <div class='form-group-item'>
+                    <label for='comments1'>Additonal comments</label>
+                    <textarea
+                        class='form-control'
+                        placeholder="e.g. please send invoice"
+                    ></textarea>
+                </div>
+            </div>
+            <div class='form-group-autofit'>
+                <div class='form-group-item'>
+                    <button class='btn btn-dark'>Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
